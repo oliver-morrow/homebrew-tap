@@ -5,20 +5,20 @@
 class Ward < Formula
   desc "Local-first MCP firewall, debugger, and replay layer"
   homepage "https://github.com/oliver-morrow/ward"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/oliver-morrow/ward/releases/download/v0.1.0/ward_darwin_amd64.tar.gz"
-      sha256 "fcb212439262b87e1bc73f0790401bd366847fff58e291802a2d0ce286711710"
+      url "https://github.com/oliver-morrow/ward/releases/download/v0.1.1/ward_0.1.1_darwin_amd64.tar.gz"
+      sha256 "7829118fee36820c21164fb05b17c72be3ab39808f5abb2d0c6e5698cb1e309b"
 
       define_method(:install) do
         bin.install "ward"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/oliver-morrow/ward/releases/download/v0.1.0/ward_darwin_arm64.tar.gz"
-      sha256 "62fb7b6d6f8a0887f070fd051d1f43f7ced5b776a6f584bfb4a97b6e0a0c0830"
+      url "https://github.com/oliver-morrow/ward/releases/download/v0.1.1/ward_0.1.1_darwin_arm64.tar.gz"
+      sha256 "e5cb16740aaede2045be0e4e8fe6e625956702f7b3ac1725df6029df50386a93"
 
       define_method(:install) do
         bin.install "ward"
@@ -28,15 +28,15 @@ class Ward < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/oliver-morrow/ward/releases/download/v0.1.0/ward_linux_amd64.tar.gz"
-      sha256 "2ea59ec8e74b9251792c06e8e03c687e8a2eeb0900affe881a5f24df3985d16f"
+      url "https://github.com/oliver-morrow/ward/releases/download/v0.1.1/ward_0.1.1_linux_amd64.tar.gz"
+      sha256 "32def008aa0f1adac2e659f6067aa943dc9e0621a8708a27496a3bebce03f610"
       define_method(:install) do
         bin.install "ward"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/oliver-morrow/ward/releases/download/v0.1.0/ward_linux_arm64.tar.gz"
-      sha256 "ed77b09efa41d8ec01b52ecc387633b1914ffbf66cc8aa9a2421fa9c9f24ce17"
+      url "https://github.com/oliver-morrow/ward/releases/download/v0.1.1/ward_0.1.1_linux_arm64.tar.gz"
+      sha256 "18086481aa7a3d63ad9561e1816c5657b1777cbf22dd5056f26e6ea2735e0bb3"
       define_method(:install) do
         bin.install "ward"
       end
